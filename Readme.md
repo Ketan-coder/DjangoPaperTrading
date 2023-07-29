@@ -1,13 +1,12 @@
-```
 # Paper Trading Web Application
 
-The Paper Trading Web Application is a Django-based platform that simulates stock and option trading in a risk-free environment. Users can register, receive an initial virtual balance, and start buying and selling stocks and options. The app provides real-time market data for Nifty 50, Bank Nifty, and Fin Nifty indexes, enabling users to practice their trading strategies without risking real money.
+The Paper Trading Web Application is a Django-based platform that simulates stock and options trading in a risk-free environment. Users can register, receive an initial virtual balance, and start buying and selling stocks and options. The app provides real-time market data for the Nifty 50, Bank Nifty, and Fin Nifty indexes, enabling users to practice their trading strategies without risking real money.
 
 ## Features
 
 - User Authentication: Users can create accounts, log in, and log out of the platform.
 - Virtual Balance: Each user is provided with an initial virtual balance to trade with.
-- Stock and Option Trading: Users can buy and sell stocks and options based on real-time data.
+- Stock and Options Trading: Users can buy and sell stocks and options based on real-time data.
 - Transaction History: All user transactions are recorded, and users can review their trading history.
 - Portfolio Management: Users can track their holdings and see the current value of their portfolio.
 - Real-Time Market Data: Real-time data for Nifty 50, Bank Nifty, and Fin Nifty is fetched to reflect market conditions accurately.
@@ -17,8 +16,8 @@ The Paper Trading Web Application is a Django-based platform that simulates stoc
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your_username/paper-trading-app.git
-cd paper-trading-app
+git clone https://github.com/Ketan-coder/DjangoPaperTrading.git
+cd DjangoPaperTrading
 ```
 
 2. Install dependencies:
@@ -67,7 +66,7 @@ python manage.py runserver
 
 ## Contributing
 
-Contributions are welcome! If you have any suggestions, feature requests, or find any issues, please feel free to open an issue or create a pull request.
+Contributions are welcome! If you have any suggestions, or feature requests, or find any issues, please feel free to open an issue or create a pull request.
 
 ## License
 
@@ -77,4 +76,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 - Your Ketan Vishwakarma, Siddhesh Yadav
 - Email: ketanv288@gmail.com
-```
+- Website: https://codingfox.pythonanywhere.com/about/
