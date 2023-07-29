@@ -1,4 +1,5 @@
 """ This python file helps to make full flushed Django Project, Django Apps, static and templates directories."""
+print("This python file helps to make full flushed Django Project, Django Apps, static and templates directories.")
 choice = int(input("1 -> Creating a new project\n2 -> Looking for changes in models.py\n"))
 import os
 os.system('cmd /c python -m pip install django webbrowser')
