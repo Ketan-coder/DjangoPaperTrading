@@ -4,7 +4,7 @@ from django.http import JsonResponse
 from .models import Stock
 
 def update_stock_data(request):
-    symbols = ['TATASTEEL.NS','RVNL.NS']  # Add stock symbols you want to track
+    symbols = ['TATASTEEL.NS','RVNL.NS','RELIANCE.NS','TCS.NS']  # Add stock symbols you want to track
     for symbol in symbols:
         stock = yf.Ticker(symbol)
         data = stock.history(period="1d")

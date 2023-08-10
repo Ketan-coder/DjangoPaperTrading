@@ -13,14 +13,14 @@
             <th>Name</th>
             <th>Symbol</th>
             <th>Last Price</th>
-            {% comment %} <th>Timestamp</th> {% endcomment %}
+            <th>See Share</th>
         </tr>
         {% for stock in stocks %}
         <tr>
             <td>{{ stock.name }}</td>
             <td>{{ stock.symbol }}</td>
             <td>{{ stock.lastPrice }}</td>
-            {% comment %} <td>{{ stock.timestamp }}</td> {% endcomment %}
+            <td><a href="https://finance.yahoo.com/quote/{{ stock.symbol }}" target="_blank">{{ stock.symbol }}</a></td>
         </tr>
         {% endfor %}
     </table>
