@@ -139,6 +139,7 @@ INSTALLED_APPS = [
     "Portfolio.apps.PortfolioConfig",
     "Analysis.apps.AnalysisConfig",
     "Commodity.apps.CommodityConfig",
+    "Crypto.apps.CryptoConfig",
 ]
 
 

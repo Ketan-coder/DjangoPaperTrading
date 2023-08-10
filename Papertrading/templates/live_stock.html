@@ -1,0 +1,63 @@
+<!-- templates/stockdata/live_stock.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Stock Data</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Live Stock Data</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Symbol</th>
+            <th>Last Price</th>
+            {% comment %} <th>Timestamp</th> {% endcomment %}
+        </tr>
+        {% for stock in stocks %}
+        <tr>
+            <td>{{ stock.name }}</td>
+            <td>{{ stock.symbol }}</td>
+            <td>{{ stock.lastPrice }}</td>
+            {% comment %} <td>{{ stock.timestamp }}</td> {% endcomment %}
+        </tr>
+        {% endfor %}
+    </table>
+
+    <script>
+    function updateStockData() {
+        $.ajax({
+            url: '/update_stock/',
+            method: 'GET',
+            success: function(data) {
+                console.log(data.message);
+                updateTable();
+            },
+            error: function(error) {
+                console.error('Error updating stock data:', error);
+            }
+        });
+    }
+
+    function updateTable() {
+        $.ajax({
+            url: '/live_stock_data/',
+            method: 'GET',
+            success: function(data) {
+                $('#stock-table').html(data);
+            },
+            error: function(error) {
+                console.error('Error fetching live stock data:', error);
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        updateStockData();
+        setInterval(updateStockData, 5000);  // Refresh every 5 seconds
+        setInterval(updateTable, 5000);  // Update table every 5 seconds
+    });
+    </script>
+</body>
+</html>

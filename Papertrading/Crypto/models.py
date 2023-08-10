@@ -7,4 +7,4 @@ class Crypto(models.Model):
     lastPrice = models.IntegerField()
 
     def __str__(self):
-        return f"{self.name} - {self.symbol} - Balance: {self.lastPrice}"
+        return f"{self.name} - {self.symbol} - Last Price: {self.lastPrice}"
