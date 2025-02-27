@@ -1,0 +1,24 @@
+<!-- OptionChainViewer/templates/optionchainviewer/option_chain_table.html -->
+
+<table id="option-chain-table">
+    <tr>
+        <th>Strike Price</th>
+        <th>CE Open Interest</th>
+        <th>CE Change in Open Interest</th>
+        <th>CE Price</th>
+        <th>PE Price</th>
+        <th>PE Change in Open Interest</th>
+        <th>PE Open Interest</th>
+    </tr>
+    {% for row in data %}
+    <tr>
+        <td>{{ row['strikePrice'] }}</td>
+        <td>{{ row['CE']['openInterest'] }}</td>
+        <td>{{ row['CE']['changeinOpenInterest'] }}</td>
+        <td>{{ row['CE']['lastPrice'] }}</td>
+        <td>{{ row['PE']['lastPrice'] }}</td>
+        <td>{{ row['PE']['changeinOpenInterest'] }}</td>
+        <td>{{ row['PE']['openInterest'] }}</td>
+    </tr>
+    {% endfor %}
+</table>

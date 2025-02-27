@@ -42,7 +42,7 @@
 
     function updateTable() {
         $.ajax({
-            url: '/live_stock_data/',
+            url: '/live_stock_data/?nocache=' + Date.now(),  // Add nocache parameter
             method: 'GET',
             success: function(data) {
                 $('#stock-table').html(data);
@@ -52,6 +52,7 @@
             }
         });
     }
+    
 
     $(document).ready(function() {
         updateStockData();
